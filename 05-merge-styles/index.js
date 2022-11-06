@@ -37,7 +37,7 @@ const readDataFromFiles = async (filesNames) => {
 const writeToFile = (filepath, data) => {
     const writeStream = filesystem.createWriteStream(filepath, 'utf8');
     writeStream.write(data)
-    writeStream.end();
+    writeStream.end()
 }
 
 const main = async () => {
