@@ -53,7 +53,7 @@ const inputData = filepath => {
 
 
 const main = () => {
-    const FILENAME = 'test.txt'
+    const FILENAME = 'test-output.txt'
 
     createAndOpenFileInCurrentFolder(FILENAME, inputData)
 }
