@@ -18,7 +18,11 @@ const getObjectsFromFolder = filePath => {
 
         files.forEach(async file => {
             if (!file.isFile()) return
-            console.dir(`${file.name} - ${path.extname(file.name).slice(1)} - ${await getFileSize(path.join(filePath, file.name))} bytes`)
+            const extension = path.extname(file.name).slice(1)
+            const name = path.parse('/' + file.name).name
+            const size = await getFileSize(path.join(filePath, file.name))
+
+            console.log(`${name} - ${extension} - ${size} bytes`)
         })
     })
 }
